@@ -122,3 +122,19 @@ Có thể xem thêm về customize [HOC](https://react-typescript-cheatsheet.net
 > Sử dụng `useMemo` <b><i>để ghi nhớ kết quả của các tính toán phức tạp</i></b>, tránh thực hiện lại chúng mỗi khi `component re-render`.
 
 3. Lazy Loading cho hình ảnh và tài nguyên
+
+4. Virtualization cho danh sách lớn
+
+5. Pre-fetching và Pre-loading
+
+6. Giảm thiểu sử dụng thư viện nặng
+
+7. Sử dụng các công cụ phân tích hiệu suất
+
+8. Tối ưu hóa Bundle với Webpack/Vite
+
+9. Tối ưu hóa các hooks và state management
+
+10. caching data sử dụng storage của browner
+
+11. Using CDNs
