@@ -1,0 +1,12 @@
+.sidebar {
+    width: 240px;
+}
+
+.sidebar .menu .item {
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: burlywood;
+    font-size: 1rem;
+    line-height: 1.25rem;
+    font-weight: 500;
+}
