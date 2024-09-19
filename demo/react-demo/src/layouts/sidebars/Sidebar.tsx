@@ -1,21 +1,28 @@
-import React from 'react'
-
+import React, { useMemo } from "react";
 
 // import styles for the component Sidebar
-import './sidebar.modules.css'
+import "./sidebar.modules.css";
+import { Link, useLocation } from "react-router-dom";
+import { menus } from "./menu";
 
 const Sidebar = () => {
-  return (
-    <div className='sidebar'>
-        <ul className='menu'>
-            <li className='item'>Home</li>
-            <li>Services</li>
-            <li>Products</li>
-            <li>Contact</li>
-        </ul>
-        
-    </div>
-  )
-}
+  const { pathname } = useLocation();
 
-export default Sidebar
+  return (
+    <div id="sidebar">
+      <ul className="sidebar_menu">
+        {menus.map((menu) => (
+          <li
+            className={`menu_item ${
+              pathname.includes(menu.path) ? "active" : ""
+            }`}
+          >
+            <Link to={menu.path}>{menu.name}</Link>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+};
+
+export default Sidebar;

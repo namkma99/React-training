@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Suspense } from "react";
 import Header from "../headers/Header";
 import Footer from "../footers/Footer";
 import Sidebar from "../sidebars/Sidebar";
@@ -11,20 +11,22 @@ import "./layout.modules.css";
 
 const Layout = () => {
   return (
-    <main id="main">
-      <section id="header">
-        <Header />
-      </section>
-      <section id="content-layout">
-        <Sidebar />
-        <article>
-          <Outlet />
-        </article>
-      </section>
-      <section id="footer">
-        <Footer />
-      </section>
-    </main>
+    <Suspense fallback={<div>Loading...</div>}>
+      <main id="main">
+        <section id="header">
+          <Header />
+        </section>
+        <section id="content-layout">
+          <Sidebar />
+          <article>
+            <Outlet />
+          </article>
+        </section>
+        <section id="footer">
+          <Footer />
+        </section>
+      </main>
+    </Suspense>
   );
 };
 
